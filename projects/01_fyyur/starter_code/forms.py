@@ -171,7 +171,7 @@ class VenueForm(Form):
         ]
     )
     website_link = StringField(
-        'website_link', validators=[ URL(), Length(max=500) ]
+        'website_link', validators=[DataRequired(), URL(), Length(max=500)]
     )
 
     seeking_talent = BooleanField( 'seeking_talent' )
@@ -241,7 +241,7 @@ class ArtistForm(Form):
     )
 
     website_link = StringField(
-        'website_link', validators=[ URL(), Length(max=500) ]
+        'website_link', validators=[DataRequired(), URL(), Length(max=500)]
      )
 
     seeking_venue = BooleanField( 'seeking_venue' )
